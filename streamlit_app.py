@@ -55,6 +55,23 @@ if uploaded_file is not None:
     
     # Converte de volta para o formato de imagem do PIL para exibição
     #gray_image_pil = Image.fromarray(gray_image)
+
+    # Obter as dimensões da imagem
+    altura, largura, _ = imagem_recortada.shape
+
+# Calcular as coordenadas do retângulo central
+    tamanho_lado_quadrado = min(altura, largura) * 3//5
+    centro_x, centro_y = largura // 2, altura // 2
+    x1 = centro_x - tamanho_lado_quadrado // 2
+    y1 = centro_y - tamanho_lado_quadrado // 2
+    x2 = centro_x + tamanho_lado_quadrado // 2
+    y2 = centro_y + tamanho_lado_quadrado // 2
+
+# Recortar a região quadrada central
+    roi = imagem_recortada[y1:y2, x1:x2]
+    imagem_recortada= roi
+    #print(roi.shape)
+
     
     # Exibe a imagem original e a imagem processada no aplicativo
     st.image(image, caption='Imagem carregada.', use_column_width=True)
