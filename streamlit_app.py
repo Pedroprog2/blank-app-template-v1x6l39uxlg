@@ -10,6 +10,7 @@ st.write("Bem-vindo! Prepare suas imagens!")
 
 # Subtítulo para a seção de upload
 st.subheader('Andamento da plataforma')
+st.markdown('<p style="color:red;">Faça upload de uma imagem nos formatos JPG, PNG ou JPEG.</p>', unsafe_allow_html=True)
 st.markdown('<p style="color:red;" O botão para subir as imagens está pronto"</p>', unsafe_allow_html=True)
 st.write("Após subir a imagem, realiza-se a detecção de bordas.")
 st.write("Identifica-se a região de interesse (ROI) e realiza o recorte da imagem.")
