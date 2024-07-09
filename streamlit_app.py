@@ -10,8 +10,16 @@ st.write("Bem-vindo! Prepare suas imagens!")
 
 # Subtítulo para a seção de upload
 st.subheader('Andamento da plataforma')
-st.write("O botão para subir as imagens está pronto. Após subir a imagem, realiza-se a detecção de bordas")
-st.write("Identifica-se a região de interesse (ROI),e realiza o recorte da imagem. Por fim, a imagem recortada é apresentada. ")
+st.write("O botão para subir as imagens está pronto")
+st.write("Após subir a imagem, realiza-se a detecção de bordas.")
+st.write("Identifica-se a região de interesse (ROI) e realiza o recorte da imagem.")
+st.write("Por fim, a imagem recortada é apresentada.")
+
+# Subtítulo para a seção de upload
+st.subheader('Próximos passos')
+st.write("Realizar a extração dos histogramas dos canais de cores: R, G e B").
+
+st.write("Salvar o modelo SVM (kernel?) (tunelamento)").
 
 # Subtítulo para a seção de upload
 st.subheader('Upload das imagens')
