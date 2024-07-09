@@ -6,11 +6,12 @@ from PIL import Image
 
 # Título do aplicativo
 st.title('Análise de Solo')
-st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar as imagens em formato .png.")
+st.write("Bem-vindo! Prepare suas imagens!")
 
 
 # Subtítulo para a seção de upload
 st.subheader('Upload das imagens')
+st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar as imagens em formato .png.")
 
 # Botão para upload de imagem
 uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"])
