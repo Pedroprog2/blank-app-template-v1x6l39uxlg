@@ -8,6 +8,10 @@ from PIL import Image
 st.title('Análise de Solo')
 st.write("Bem-vindo! Prepare suas imagens!")
 
+# Subtítulo para a seção de upload
+st.subheader('Andamento da plataforma')
+st.write("O botão para subir as imagens está pronto. Após subir a imagem, realiza-se a detecção de bordas")
+st.write("Identifica-se a região de interesse (ROI),e realiza o recorte da imagem. Por fim, a imagem recortada é apresentada. ")
 
 # Subtítulo para a seção de upload
 st.subheader('Upload das imagens')
