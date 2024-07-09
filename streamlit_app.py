@@ -17,9 +17,9 @@ st.write("Por fim, a imagem recortada é apresentada.")
 
 # Subtítulo para a seção de upload
 st.subheader('Próximos passos')
-st.write("Realizar a extração dos histogramas dos canais de cores: R, G e B").
+st.write("Realizar a extração dos histogramas dos canais de cores: R, G e B.")
 
-st.write("Salvar o modelo SVM (kernel?) (tunelamento)").
+st.write("Salvar o modelo SVM (kernel?) (tunelamento).")
 
 # Subtítulo para a seção de upload
 st.subheader('Upload das imagens')
