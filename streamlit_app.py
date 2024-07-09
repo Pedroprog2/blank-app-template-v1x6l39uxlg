@@ -6,7 +6,7 @@ from PIL import Image
 
 # Título do aplicativo
 st.title('Análise de Solo')
-
+st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar as imagens em formato .png.")
 
 
 # Subtítulo para a seção de upload
