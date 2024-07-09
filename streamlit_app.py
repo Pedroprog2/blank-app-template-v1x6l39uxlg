@@ -5,7 +5,12 @@ import numpy as np
 from PIL import Image
 
 # Título do aplicativo
-st.title('Upload de Imagens com OpenCV')
+st.title('Análise de Solo')
+
+
+
+# Subtítulo para a seção de upload
+st.subheader('Upload das imagens')
 
 # Botão para upload de imagem
 uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"])
