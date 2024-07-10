@@ -98,4 +98,4 @@ if uploaded_file is not None:
     st.write("Carregado e processado com sucesso!")
 
 #Exibir o tamanho da imagem:
-    st.write("Tamanho da imagem em pixels:" total_pixels)
+    st.write("Tamanho da imagem em pixels:", total_pixels)
