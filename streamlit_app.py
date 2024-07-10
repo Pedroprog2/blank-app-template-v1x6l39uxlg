@@ -85,6 +85,12 @@ if uploaded_file is not None:
     imagem_recortada= roi
     #print(roi.shape)
 
+    #Agora vamos calcular o tamanho da imagem:
+    total_pixels = np.prod(roi.shape[:2])
+
+    #Exibir o tamanho da imagem:
+    st.write(total_pixels)
+
     
     # Exibe a imagem original e a imagem processada no aplicativo
     st.image(image, caption='Imagem carregada.', use_column_width=True)
