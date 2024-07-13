@@ -158,7 +158,7 @@ if uploaded_file is not None:
 # Exibir o gráfico
     #plt.show()
 
-    plt.hist(vetor_concatenado.T, bins=768, histtype='step', fill=True, color='skyblue')
+    plt.hist(vetor_concatenado.T)
     plt.show()
 
     #print(vetor_concatenado.shape)
