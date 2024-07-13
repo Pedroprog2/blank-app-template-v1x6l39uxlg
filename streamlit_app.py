@@ -125,6 +125,18 @@ if uploaded_files is not None:
             # Concatenar os histogramas em um único vetor
             vetor_concatenado = np.concatenate((hist_azul, hist_verde, hist_vermelho, hist_hue, hist_saturation, hist_value, hist_cinza), axis=None)
 
+        # Adicionar o vetor à lista
+            vetores_concatenados.append(vetor_concatenado)
+
+        # Converter a lista em uma matriz numpy
+matriz_histogramas = np.array(vetores_concatenados)
+
+# Agora, você tem a matriz_histogramas onde cada linha corresponde ao vetor com os histogramas concatenados
+print(matriz_histogramas)
+
+print(matriz_histogramas.shape)
+
+        
             # Criar um gráfico
             plt.figure()
             plt.plot(vetor_concatenado)
