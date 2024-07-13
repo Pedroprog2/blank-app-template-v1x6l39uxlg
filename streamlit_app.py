@@ -157,7 +157,7 @@ if uploaded_file is not None:
     #plt.matshow(vetor_concatenado)
 # Exibir o gráfico
     #plt.show()
-
+    plt.imshow(vetor_concatenado.T)
     plt.hist(vetor_concatenado.T)
     plt.show()
 
