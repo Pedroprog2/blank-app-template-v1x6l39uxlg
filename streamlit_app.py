@@ -154,9 +154,9 @@ if uploaded_file is not None:
 
     # Criar um gráfico
     plt.figure()
-    plt.matshow(vetor_concatenado)
+    plt.matshow(vetor_concatenado.T)
 # Exibir o gráfico
-    plt.hist(vetor_concatenado.T)
+    #plt.hist(vetor_concatenado.T)
     plt.show()
 
     #print(vetor_concatenado.shape)
