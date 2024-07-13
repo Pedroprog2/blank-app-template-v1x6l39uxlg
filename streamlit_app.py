@@ -29,7 +29,7 @@ st.subheader('Upload das imagens')
 st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar as imagens em formato .png.")
 
 # Botão para upload de imagem
-uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
 
 # Verifica se o arquivo foi enviado
 if uploaded_files is not None:
