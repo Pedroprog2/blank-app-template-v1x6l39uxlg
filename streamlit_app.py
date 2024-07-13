@@ -128,13 +128,7 @@ if uploaded_files is not None:
         # Adicionar o vetor à lista
             vetores_concatenados.append(vetor_concatenado)
 
-        # Converter a lista em uma matriz numpy
-matriz_histogramas = np.array(vetores_concatenados)
 
-# Agora, você tem a matriz_histogramas onde cada linha corresponde ao vetor com os histogramas concatenados
-print(matriz_histogramas)
-
-print(matriz_histogramas.shape)
 
         
             # Criar um gráfico
@@ -149,3 +143,11 @@ print(matriz_histogramas.shape)
             
             st.write("Histograma da Imagem:", vetor_concatenado.T)
             st.write("Tamanho do vetor da imagem:", vetor_concatenado.shape)
+
+        # Converter a lista em uma matriz numpy
+matriz_histogramas = np.array(vetores_concatenados)
+
+# Agora, você tem a matriz_histogramas onde cada linha corresponde ao vetor com os histogramas concatenados
+print(matriz_histogramas)
+
+print(matriz_histogramas.shape)
