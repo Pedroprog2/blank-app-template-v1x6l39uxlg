@@ -154,11 +154,11 @@ if uploaded_file is not None:
 
     # Criar um gráfico
     plt.figure()
-    plt.matshow(vetor_concatenado.T)
+    plt.hist(vetor_concatenado.T)
+    
 # Exibir o gráfico
-    #plt.hist(vetor_concatenado.T)
     plt.show()
 
-    #print(vetor_concatenado.shape)
+    #print(vetor_concatenado)
 #Exibir o tamanho da imagem:
     st.write("Tamanho do vetor da imagem:",  vetor_concatenado.shape)
