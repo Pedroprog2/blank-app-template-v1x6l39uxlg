@@ -11,8 +11,8 @@ st.write("Bem-vindo! Prepare suas imagens!")
 
 # Subtítulo para a seção de upload
 st.subheader('Andamento da plataforma')
-st.markdown('<p style="color:red;">O botão para subir as imagens está pronto.</p>', unsafe_allow_html=True)
-
+#st.markdown('<p style="color:red;">O botão para subir as imagens está pronto.</p>', unsafe_allow_html=True)
+st.write("O botão para subir as imagens está pronto")
 st.write("Após subir a imagem, realiza-se a detecção de bordas.")
 st.write("Identifica-se a região de interesse (ROI) e realiza o recorte da imagem.")
 st.write("Por fim, a imagem recortada é apresentada.")
@@ -20,6 +20,7 @@ st.write("Realize-se a extração dos histogramas dos canais de cores: R, G e B.
 
 # Subtítulo para a seção de upload
 st.subheader('Próximos passos')
+st.write("Subir várias imagens e criar o modelo e analisar como salva-lo)
 st.write("Salvar o modelo SVM (kernel?) (tunelamento).")
 st.write("Podemos salvar o modelo no google cloud e acessá-lo via API, o gpt recomendou uma estratégia")
 
