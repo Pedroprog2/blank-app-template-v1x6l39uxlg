@@ -3,6 +3,7 @@ import cv2
 print(cv2.__version__)
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 
 # Título do aplicativo
 st.title('Análise de Solo')
