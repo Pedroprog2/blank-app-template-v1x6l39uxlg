@@ -90,8 +90,6 @@ if uploaded_file is not None:
     total_pixels = np.prod(roi.shape[:2])
 
     
-
-    
     # Exibe a imagem original e a imagem processada no aplicativo
     st.image(image, caption='Imagem carregada.', use_column_width=True)
     st.image(imagem_recortada, caption='Imagem recortada.', use_column_width=True)
@@ -100,3 +98,55 @@ if uploaded_file is not None:
 
 #Exibir o tamanho da imagem:
     st.write("Tamanho da imagem em pixels:", total_pixels)
+
+
+# Subtítulo para a seção de upload
+    st.subheader('Extraindo histogramas')
+
+
+
+# Converter a imagem para formato HSV
+    imagem_hsv = cv2.cvtColor(imagem_recortada, cv2.COLOR_BGR2HSV)
+
+ # Separar os canais HSV
+    hue =  imagem_hsv[:, :, 0]
+    saturation =  imagem_hsv[:, :, 1]
+    value =  imagem_hsv[:, :, 2]
+        
+        # Calcular os histogramas
+    hist_hue = cv2.calcHist([hue], [0], None, [256], [0, 256])
+    hist_hue = hist_hue / total_pixels
+        
+    hist_saturation = cv2.calcHist([saturation], [0], None, [256], [0, 256])
+    hist_saturation = hist_saturation / total_pixels
+        
+    hist_value = cv2.calcHist([value], [0], None, [256], [0, 256])
+    hist_value = hist_value / total_pixels
+
+    # Converter a imagem para escala de cinza
+    imagem_cinza = cv2.cvtColor(imagem_recortada, cv2.COLOR_BGR2GRAY)
+
+        # Extrair histograma em escala de cinza
+    hist_cinza = cv2.calcHist([imagem_cinza], [0], None, [256], [0, 256])
+     hist_cinza = hist_cinza / total_pixels
+
+        # Separar os canais de cores (B, G, R)
+    canal_azul = imagem_recortada[:, :, 0]
+    canal_verde = imagem_recortada[:, :, 1]
+    canal_vermelho = imagem_recortada[:, :, 2]
+
+        # Calcular os histogramas
+    hist_azul = cv2.calcHist([canal_azul], [0], None, [256], [0, 256])
+    hist_azul  = hist_azul / total_pixels
+        
+    hist_verde = cv2.calcHist([canal_verde], [0], None, [256], [0, 256])
+    hist_verde  = hist_verde / total_pixels
+        
+    hist_vermelho = cv2.calcHist([canal_vermelho], [0], None, [256], [0, 256])
+    hist_vermelho  = hist_vermelho / total_pixels
+
+        # Concatenar os histogramas em um único vetor
+    vetor_concatenado = np.concatenate((hist_azul, hist_verde, hist_vermelho, hist_hue, hist_saturation, hist_value, hist_cinza), axis=None)
+    #print(vetor_concatenado.shape)
+#Exibir o tamanho da imagem:
+    st.write("Tamanho do vetor da imagem:", vetor_cocatenado.shape)
