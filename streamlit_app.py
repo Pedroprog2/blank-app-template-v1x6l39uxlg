@@ -128,7 +128,7 @@ if uploaded_file is not None:
 
         # Extrair histograma em escala de cinza
     hist_cinza = cv2.calcHist([imagem_cinza], [0], None, [256], [0, 256])
-     hist_cinza = hist_cinza / total_pixels
+    hist_cinza = hist_cinza / total_pixels
 
         # Separar os canais de cores (B, G, R)
     canal_azul = imagem_recortada[:, :, 0]
