@@ -149,4 +149,4 @@ if uploaded_file is not None:
     vetor_concatenado = np.concatenate((hist_azul, hist_verde, hist_vermelho, hist_hue, hist_saturation, hist_value, hist_cinza), axis=None)
     #print(vetor_concatenado.shape)
 #Exibir o tamanho da imagem:
-    st.write("Tamanho do vetor da imagem:", vetor_cocatenado.shape)
+    st.write("Tamanho do vetor da imagem:",  vetor_concatenado.shape)
