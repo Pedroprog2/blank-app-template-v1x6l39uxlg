@@ -150,6 +150,6 @@ if uploaded_files is not None:
 matriz_histogramas = np.array(vetores_concatenados)
 
 # Agora, você tem a matriz_histogramas onde cada linha corresponde ao vetor com os histogramas concatenados
-print(matriz_histogramas)
-
-print(matriz_histogramas.shape)
+#print(matriz_histogramas)
+st.write("Matriz de dados:", matriz_histogramas)
+#print(matriz_histogramas.shape)
