@@ -31,6 +31,9 @@ st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar
 # Botão para upload de imagem
 uploaded_files = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
 
+# Lista para armazenar os vetores concatenados
+vetores_concatenados = []
+
 # Verifica se o arquivo foi enviado
 if uploaded_files is not None:
     for uploaded_file in uploaded_files:
