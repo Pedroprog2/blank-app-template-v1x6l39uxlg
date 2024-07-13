@@ -20,7 +20,7 @@ st.write("Realize-se a extração dos histogramas dos canais de cores: R, G e B.
 
 # Subtítulo para a seção de upload
 st.subheader('Próximos passos')
-st.write("Subir várias imagens e criar o modelo e analisar como salva-lo)
+st.write("Subir várias imagens e criar o modelo e analisar como salva-lo")
 st.write("Salvar o modelo SVM (kernel?) (tunelamento).")
 st.write("Podemos salvar o modelo no google cloud e acessá-lo via API, o gpt recomendou uma estratégia")
 
