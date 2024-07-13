@@ -158,6 +158,7 @@ if uploaded_file is not None:
     
 # Exibir o gráfico
     plt.show()
-    st.write("Histograma da Imagem:", vetor_concatenado)
+    
+    st.write("Histograma da Imagem:", vetor_concatenado.T)
 #Exibir o tamanho da imagem:
     st.write("Tamanho do vetor da imagem:",  vetor_concatenado.shape)
