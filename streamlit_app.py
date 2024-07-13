@@ -96,6 +96,9 @@ if uploaded_file is not None:
     st.write("")
     st.write("Carregado e processado com sucesso!")
 
+
+    # Subtítulo para a seção de upload
+    st.subheader('Informações da imagem')
 #Exibir o tamanho da imagem:
     st.write("Tamanho da imagem em pixels:", total_pixels)
 
@@ -138,7 +141,7 @@ if uploaded_file is not None:
         # Calcular os histogramas
     hist_azul = cv2.calcHist([canal_azul], [0], None, [256], [0, 256])
     hist_azul  = hist_azul / total_pixels
-        
+         
     hist_verde = cv2.calcHist([canal_verde], [0], None, [256], [0, 256])
     hist_verde  = hist_verde / total_pixels
         
@@ -147,6 +150,16 @@ if uploaded_file is not None:
 
         # Concatenar os histogramas em um único vetor
     vetor_concatenado = np.concatenate((hist_azul, hist_verde, hist_vermelho, hist_hue, hist_saturation, hist_value, hist_cinza), axis=None)
+
+    # Criar um gráfico
+    plt.figure()
+    #plt.matshow(vetor_concatenado)
+# Exibir o gráfico
+    #plt.show()
+
+    plt.hist(mvetor_concatenado[,:].T, bins=768, histtype='step', fill=True, color='skyblue')
+    plt.show()
+
     #print(vetor_concatenado.shape)
 #Exibir o tamanho da imagem:
     st.write("Tamanho do vetor da imagem:",  vetor_concatenado.shape)
