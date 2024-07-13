@@ -35,12 +35,16 @@ uploaded_files = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "
 if uploaded_files is not None:
     for uploaded_file in uploaded_files:
         st.image(uploaded_file, caption=uploaded_file.name)
+
+
+         # Carregar a imagem
+        imagem = cv2.imread(uploaded_file)
         
         # Converte a imagem para um array numpy
-        img_array = np.array(uploaded_file)
+        #img_array = np.array(uploaded_file)
         
         # Converte a imagem para BGR (OpenCV usa BGR em vez de RGB)
-        img_bgr = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
+        img_bgr = cv2.cvtColor(imagem, cv2.COLOR_RGB2BGR)
         
         # Processa a imagem com OpenCV (exemplo: converte para escala de cinza)
         gray_image = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
