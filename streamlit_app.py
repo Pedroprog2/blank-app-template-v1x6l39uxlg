@@ -29,12 +29,12 @@ st.subheader('Upload das imagens')
 st.write("Este aplicativo usa OpenCV para processar imagens. Você pode carregar as imagens em formato .png.")
 
 # Botão para upload de imagem
-uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"])
+uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "png", "jpeg"], accept_multiple_files=True))
 
 # Verifica se o arquivo foi enviado
-if uploaded_file is not None:
-    # Abre a imagem
-    image = Image.open(uploaded_file)
+if uploaded_files is not None:
+    for uploaded_file in uploaded_files:
+        st.image(uploaded_file, caption=uploaded_file.name)
     
     # Converte a imagem para um array numpy
     img_array = np.array(image)
