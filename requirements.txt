@@ -3,3 +3,5 @@ opencv-python-headless
 pillow
 numpy
 matplotlib
+joblib
+requests
