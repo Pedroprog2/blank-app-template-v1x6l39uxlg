@@ -135,17 +135,41 @@ if uploaded_files is not None:
 
         
             # Criar um gráfico
-            plt.figure()
-            plt.plot(vetor_concatenado)
-            plt.title('Histograma da Imagem')
-            plt.xlabel('Bins')
-            plt.ylabel('Frequência')
+            # Criação de um gráfico 3D
+# Crie grades para os eixos X e Y
+        x = np.arange(0,  vetores_concatenados.shape[1], 1)
+        y = np.arange(0, matriz_histogramas.shape[0], 1)
+        x, y = np.meshgrid(x, y)
+
+# Crie um gráfico 3D
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+
+# Plote a superfície
+        ax.plot_surface(x, y, matriz_histogramas, cmap='viridis')
+
+# Adicione rótulos aos eixos
+        ax.set_xlabel('Eixo X')
+        ax.set_ylabel('Eixo Y')
+        ax.set_zlabel('Valores')
+
+# Adicione um título ao gráfico
+        ax.set_title('Gráfico 3D da Matriz')
+
+# Exiba o gráfico
+         st.pyplot(fig)
+
+            #plt.figure()
+            #plt.plot(vetor_concatenado)
+            #plt.title('Histograma da Imagem')
+            #plt.xlabel('Bins')
+            #plt.ylabel('Frequência')
             
             # Exibir o gráfico
-            st.pyplot(plt)
+            #st.pyplot(plt)
             
-            st.write("Histograma da Imagem:", vetor_concatenado.T)
-            st.write("Tamanho do vetor da imagem:", vetor_concatenado.shape)
+            #st.write("Histograma da Imagem:", vetor_concatenado.T)
+            #st.write("Tamanho do vetor da imagem:", vetor_concatenado.shape)
 
         # Converter a lista em uma matriz numpy
 matriz_histogramas = np.array(vetores_concatenados)
