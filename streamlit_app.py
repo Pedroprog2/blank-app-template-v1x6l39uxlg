@@ -180,3 +180,6 @@ st.pyplot(fig)
 #print(matriz_histogramas)
 st.write("Matriz de dados:", matriz_histogramas)
 #print(matriz_histogramas.shape)
+
+#Carregando o modelo SVM
+model = load_model(model_url)
