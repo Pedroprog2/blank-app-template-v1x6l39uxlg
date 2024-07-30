@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 import requests
+import joblib
 
 def load_model(url):
     response = requests.get(url)
