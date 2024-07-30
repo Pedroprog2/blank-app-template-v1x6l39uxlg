@@ -5,6 +5,13 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
+def load_model(url):
+    response = requests.get(url)
+    with open('svm_model.pkl', 'wb') as f:
+        f.write(response.content)
+    model = joblib.load('svm_model.pkl')
+    return model
+
 # Título do aplicativo
 st.title('Análise de Solo')
 st.write("Bem-vindo! Prepare suas imagens!")
