@@ -137,7 +137,8 @@ if uploaded_files is not None:
             # Criar um gráfico
             # Criação de um gráfico 3D
 # Crie grades para os eixos X e Y
-        x = np.arange(0,  vetores_concatenados.shape[1], 1)
+        matriz_histogramas = np.array(vetores_concatenados)
+        x = np.arange(0,  matriz_histogramas.shape[1], 1)
         y = np.arange(0, matriz_histogramas.shape[0], 1)
         x, y = np.meshgrid(x, y)
 
