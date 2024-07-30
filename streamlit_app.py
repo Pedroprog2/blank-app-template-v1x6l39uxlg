@@ -8,11 +8,16 @@ import requests
 import joblib
 
 def load_model(url):
-    response = requests.get(url)
-    with open('svm_model.pkl', 'wb') as f:
-        f.write(response.content)
-    model = joblib.load('svm_model.pkl')
-    return model
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Check if the request was successful
+        with open('svm_model.pkl', 'wb') as f:
+            f.write(response.content)
+        model = joblib.load('svm_model.pkl')
+        return model
+    except Exception as e:
+        st.error(f"Erro ao carregar o modelo: {e}")
+        return None
 
 # Título do aplicativo
 st.title('Análise de Solo')
