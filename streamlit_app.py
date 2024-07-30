@@ -182,4 +182,5 @@ st.write("Matriz de dados:", matriz_histogramas)
 #print(matriz_histogramas.shape)
 
 #Carregando o modelo SVM
-model = load_model(svm_model.pkl)
+model_url = 'https://github.com/Pedroprog2/blank-app-template-v1x6l39uxlg/blob/86424555509c81f810837877bfcb8a14d6d192ba/svm_model.pkl'
+model = load_model(model_url)
