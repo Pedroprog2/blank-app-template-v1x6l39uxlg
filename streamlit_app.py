@@ -157,7 +157,7 @@ if uploaded_files is not None:
         ax.set_title('Gráfico 3D da Matriz')
 
 # Exiba o gráfico
-         st.pyplot(fig)
+        st.pyplot(fig)
 
             #plt.figure()
             #plt.plot(vetor_concatenado)
