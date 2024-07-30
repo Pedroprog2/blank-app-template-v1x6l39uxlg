@@ -7,14 +7,25 @@ import matplotlib.pyplot as plt
 import requests
 import joblib
 
+@st.cache_resource
 def load_model(url):
     try:
         response = requests.get(url)
         response.raise_for_status()  # Check if the request was successful
         with open('svm_model.pkl', 'wb') as f:
             f.write(response.content)
+
+        # Verificar o tamanho do arquivo (opcional, dependendo do tamanho esperado)
+        file_size = os.path.getsize('svm_model.pkl')
+        if file_size < 1000:  # Suponha que um tamanho menor que 1KB seja suspeito
+            st.error("O arquivo baixado parece estar corrompido ou incompleto.")
+            return None
+
         model = joblib.load('svm_model.pkl')
         return model
+    except requests.exceptions.RequestException as e:
+        st.error(f"Erro ao baixar o modelo: {e}")
+        return None
     except Exception as e:
         st.error(f"Erro ao carregar o modelo: {e}")
         return None
