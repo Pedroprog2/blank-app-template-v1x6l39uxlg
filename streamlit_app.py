@@ -6,6 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import requests
 import joblib
+import os
 
 
 @st.cache_resource
