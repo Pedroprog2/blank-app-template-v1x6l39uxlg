@@ -25,7 +25,7 @@ def load_model(url):
         #if file_size < 1000:  # Suponha que um tamanho menor que 1KB seja suspeito
             #st.error("O arquivo baixado parece estar corrompido ou incompleto.")
            # return None
-        model = joblib.load(urlopen(url)
+        model = joblib.load(urlopen(url))
         #model = joblib.load('svm_model.pkl')
         return model
     except requests.exceptions.RequestException as e:
