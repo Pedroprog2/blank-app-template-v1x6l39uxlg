@@ -6,7 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import requests
 import joblib
-import os
+#import os
 #from sklearn.preprocessing import StandardScaler
 #from sklearn.svm import SVC
 
@@ -20,10 +20,10 @@ def load_model(url):
             f.write(response.content)
 
         # Verificar o tamanho do arquivo (opcional, dependendo do tamanho esperado)
-        file_size = os.path.getsize('svm_model.pkl')
-        if file_size < 1000:  # Suponha que um tamanho menor que 1KB seja suspeito
-            st.error("O arquivo baixado parece estar corrompido ou incompleto.")
-            return None
+        #file_size = os.path.getsize('svm_model.pkl')
+        #if file_size < 1000:  # Suponha que um tamanho menor que 1KB seja suspeito
+            #st.error("O arquivo baixado parece estar corrompido ou incompleto.")
+           # return None
 
         model = joblib.load('svm_model.pkl')
         return model
