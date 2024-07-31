@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import requests
 import joblib
 import os
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
+#from sklearn.preprocessing import StandardScaler
+#from sklearn.svm import SVC
 
 
 @st.cache_resource
